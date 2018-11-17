@@ -55,7 +55,21 @@ section
 				animation-duration 2s,1s
 				animation-timing-function ease-in,ease-out
 				animation-fill-mode forwards
+			.flecha
+				animation-name flecha
+				//animation-delay 0s,3s
+				animation-duration .3s
+				animation-timing-function ease-in
+				animation-fill-mode forwards
+				//animation-iteration-count infinite
 			
+		.flecha
+			width 70px
+			position absolute
+			right 260px
+			top 90px
+			img
+				width 100%
 		.dedo
 			width 127px
 			position absolute
@@ -125,6 +139,7 @@ section
 @keyframes taco {
 	from{								
 		right 0px
+		
 	}
 	to{
 				
@@ -135,9 +150,10 @@ section
 @keyframes taco-regresa {
 	from{								
 		right 181px
+		top 164px
 	}
 	to{				
-		right 50px
+		right 0px
 	}
 }
 @keyframes dedo{
@@ -158,5 +174,16 @@ section
 	to{
 		transform rotate(0deg)		
 		top 89px
+	}
+}
+
+@keyframes flecha{
+	from{									
+		opacity 0
+		width 45px
+	}
+	to{
+		opacity 1
+		width 70px
 	}
 }
