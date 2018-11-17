@@ -42,17 +42,25 @@ section
 		position relative
 		margin 0 auto
 		width 1014px		
-		
+		&:hover
+			.dedo																
+				animation-name dedo, dedo-regresa
+				animation-duration 1s,.5s
+				animation-timing-function ease-in,ease-out
+				animation-fill-mode forwards
+				animation-delay 2s,3.5s
+			.taco															
+				animation-name taco,taco-regresa
+				animation-delay 0s,3s
+				animation-duration 2s,1s
+				animation-timing-function ease-in,ease-out
+				animation-fill-mode forwards
+			
 		.dedo
 			width 127px
 			position absolute
 			left 455px
-			top 89px
-			animation-name dedo, dedo-regresa
-			animation-duration 1s,.5s
-			animation-timing-function ease-in,ease-out
-			animation-fill-mode forwards
-			animation-delay 2s,3.5s			
+			top 89px			
 			img
 				width 100%			
 			
@@ -79,12 +87,7 @@ section
 			z-index 1
 			top 152px
 			right 0px
-			//transition .3s 
-			animation-name taco,taco-regresa
-			animation-delay 0s,3s
-			animation-duration 2s,1s
-			animation-timing-function ease-in,ease-out
-			animation-fill-mode forwards
+			//transition .3s 			
 			
 			img
 				width 100%				
