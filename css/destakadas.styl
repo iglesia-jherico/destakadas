@@ -5,11 +5,23 @@ body
 
 .logo
 	position absolute
+	z-index 7
 	width 75px
 	top 15px
 	left 15px
 	img
 		width 100%
+.testeos
+	width 185px
+	position absolute
+	top 115px
+	left 10px
+	z-index 6
+	img
+		width 100%
+		border solid 1px black
+		border-radius 15px 15px 15px 15px
+
 header
 	h1
 		font-family 'Oswald', sans-serif
@@ -25,24 +37,41 @@ header
 		
 section
 	.caja-zapatos
-		//background red
+		background red
 		//display flex
 		position relative
 		margin 0 auto
-		width 1014px
-				
-		&:hover			
-			.taco
-				transform translate(-100px, 14px)
-				transition .3s
-				right 80px					
+		width 1014px		
+		
+		.dedo
+			width 127px
+			position absolute
+			left 455px
+			top 89px
+			animation-name dedo, dedo-regresa
+			animation-duration 1s,.5s
+			animation-timing-function ease-in,ease-out
+			animation-fill-mode forwards
+			animation-delay 2s,3.5s			
+			img
+				width 100%			
+			
+		.zapato-unido
+			width 834px
+			//background green
+			position absolute
+			z-index 5
+			opacity 0
+			//transition .3s					
+			img
+				width 100%
 		.zapato
 			//background yellow
-			//position absolute
+			position absolute
 			width 662px
 			img
 				width 100% 
-		.taco
+		.taco			
 			width 296px
 			//background green
 			//margin-top 151px
@@ -50,34 +79,81 @@ section
 			z-index 1
 			top 152px
 			right 0px
-			transition .3s 
+			//transition .3s 
+			animation-name taco,taco-regresa
+			animation-delay 0s,3s
+			animation-duration 2s,1s
+			animation-timing-function ease-in,ease-out
+			animation-fill-mode forwards
+			
 			img
-				width 100%
+				width 100%				
 		
-		.destakadas
-			position absolute		
-			width 240px
-			left 45%	
-			bottom 0px
-			img
-				width 100%
+		
+	.destakadas
+		position absolute		
+		width 280px
+		left 44%
+		right 56%		
+		bottom 0
+		img
+			width 100%
 
-		.integrantes
-			position absolute
-			right 15px
-			bottom 40px
-			background rgba(255, 255, 255, .40)
-			padding 15px
-			border-radius 20px
-			h3
-				font-family 'Roboto Condensed', sans-serif
-				color #A53692
-				margin 0
-			ul
-				font-family arial
+	.integrantes
+		position absolute
+		right 15px
+		bottom 40px
+		background rgba(255, 255, 255, .40)
+		padding 15px
+		border-radius 20px
+		h3
+			font-family 'Roboto Condensed', sans-serif
+			color #A53692
+			margin 0
+		ul
+			font-family arial
+			margin 0
+			padding 0
+			li
 				margin 0
 				padding 0
-				li
-					margin 0
-					padding 0
-					list-style none
+				list-style none
+
+@keyframes taco {
+	from{								
+		right 0px
+	}
+	to{
+				
+		right 181px
+		top 164px
+	}
+}
+@keyframes taco-regresa {
+	from{								
+		right 181px
+	}
+	to{				
+		right 50px
+	}
+}
+@keyframes dedo{
+	from{								
+		top 89px
+		
+	}
+	to{
+		transform rotate(30deg)		
+		top 103px
+	}
+}
+@keyframes dedo-regresa{
+	from{									
+		transform rotate(30deg)
+		top 103px
+	}
+	to{
+		transform rotate(0deg)		
+		top 89px
+	}
+}
