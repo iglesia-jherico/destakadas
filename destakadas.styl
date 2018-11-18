@@ -1,0 +1,189 @@
+body
+	background #92D8F8
+	margin 0
+	overflow hidden
+
+.logo
+	position absolute
+	z-index 7
+	width 75px
+	top 15px
+	left 15px
+	img
+		width 100%
+.testeos
+	width 185px
+	position absolute
+	top 115px
+	left 10px
+	z-index 6
+	img
+		width 100%
+		border solid 1px black
+		border-radius 15px 15px 15px 15px
+
+header
+	h1
+		font-family 'Oswald', sans-serif
+		text-align center
+		margin 0
+		font-size 50px
+		color #A53692
+	h2
+		font-family 'Roboto Condensed', sans-serif
+		margin 0
+		text-align center
+		margin-bottom 15px
+		
+section
+	.caja-zapatos
+		background red
+		//display flex
+		position relative
+		margin 0 auto
+		width 1014px		
+		&:hover
+			.dedo																
+				animation-name dedo, dedo-regresa
+				animation-duration .5s,.5s
+				animation-timing-function ease-in,ease-out
+				animation-fill-mode forwards
+				animation-delay 1s,2.5s
+			.taco															
+				animation-name taco,taco-regresa
+				animation-delay 0s,2s
+				animation-duration .7s,1s
+				animation-timing-function ease-in,ease-out
+				animation-fill-mode forwards
+			.flecha
+				animation-name flecha
+				//animation-delay 0s,3s
+				animation-duration .3s
+				animation-timing-function ease-in
+				animation-fill-mode forwards
+				//animation-iteration-count infinite
+			
+		.flecha
+			width 71px
+			position absolute
+			right 260px
+			top 90px
+			img
+				width 100%
+		.dedo
+			width 127px
+			position absolute
+			left 455px
+			top 89px			
+			img
+				width 100%			
+			
+		.zapato-unido
+			width 834px
+			//background green
+			position absolute
+			z-index 5
+			opacity 0
+			//transition .3s					
+			img
+				width 100%
+		.zapato
+			//background yellow
+			position absolute
+			width 662px
+			img
+				width 100% 
+		.taco			
+			width 296px
+			//background green
+			//margin-top 151px
+			position absolute
+			z-index 1
+			top 152px
+			right 0px
+			//transition .3s 			
+			
+			img
+				width 100%				
+		
+		
+	.destakadas
+		position absolute		
+		width 280px
+		left 44%
+		right 56%		
+		bottom 0
+		img
+			width 100%
+
+	.integrantes
+		position absolute
+		right 15px
+		bottom 40px
+		background rgba(255, 255, 255, .40)
+		padding 15px
+		border-radius 20px
+		h3
+			font-family 'Roboto Condensed', sans-serif
+			color #A53692
+			margin 0
+		ul
+			font-family arial
+			margin 0
+			padding 0
+			li
+				margin 0
+				padding 0
+				list-style none
+
+@keyframes taco {
+	from{								
+		right 0px
+		
+	}
+	to{
+				
+		right 181px
+		top 164px
+	}
+}
+@keyframes taco-regresa {
+	from{								
+		right 181px
+		top 164px
+	}
+	to{				
+		right 0px
+	}
+}
+@keyframes dedo{
+	from{								
+		top 89px
+		
+	}
+	to{
+		transform rotate(30deg)		
+		top 103px
+	}
+}
+@keyframes dedo-regresa{
+	from{									
+		transform rotate(30deg)
+		top 103px
+	}
+	to{
+		transform rotate(0deg)		
+		top 89px
+	}
+}
+
+@keyframes flecha{
+	from{									
+		opacity 0
+		width 45px
+	}
+	to{
+		opacity 1
+		width 70px
+	}
+}
