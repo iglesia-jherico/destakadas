@@ -55,12 +55,12 @@ section
 				animation-duration .5s,.5s
 				animation-timing-function ease-in,ease-out
 				animation-fill-mode forwards
-				animation-delay 1s,2.5s
+				animation-delay 3.5s,5s
 			.taco															
-				animation-name taco,taco-regresa
-				animation-delay 0s,2s
-				animation-duration .7s,1s
-				animation-timing-function ease-in,ease-out
+				animation-name taco_sube,taco_entra,taco-regresa,taco-regresa_baja
+				animation-delay 0s,2s,4s,6s
+				animation-duration .7s,1s,1s,1s
+				animation-timing-function ease-in,ease-out,ease-in,ease-out
 				animation-fill-mode forwards
 			.flecha
 				animation-name flecha
@@ -106,7 +106,7 @@ section
 			//margin-top 151px
 			position absolute
 			z-index 1
-			top 152px
+			top 164px
 			right 0px
 			//transition .3s 			
 			
@@ -142,11 +142,20 @@ section
 				margin 0
 				padding 0
 				list-style none
-
-@keyframes taco {
+@keyframes taco_sube {	
 	from{								
-		right 0px
-		
+		top 164px
+	}
+	to{
+				
+		top 80px
+	}
+}
+
+@keyframes taco_entra {	
+	from{								
+		right 0px		
+		top 80px
 	}
 	to{
 				
@@ -161,6 +170,17 @@ section
 	}
 	to{				
 		right 0px
+		top 80px
+	}
+}
+@keyframes taco-regresa_baja {
+	from{								
+		right 0px
+		top 80px
+	}
+	to{				
+		right 0px
+		top 164px
 	}
 }
 @keyframes dedo{
